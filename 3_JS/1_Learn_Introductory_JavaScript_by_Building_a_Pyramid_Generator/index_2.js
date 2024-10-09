@@ -27,10 +27,15 @@ function addTwoNumbers(firstNum, secondNum) {
 const sum = addTwoNumbers(5, 10);
 console.log(sum);
 
-let done = 0;
+/*while (rows.length < count) {
+  rows.push(padRow(rows.length + 1, count));
+}*/
 
-while (done!==count) {
-  done++;
-  rows.push(padRow(done, count));
-}
-
+/*for (let i = count; i > 0; i--) {
+  rows.push(padRow(i, count));
+  }
+*/
+const numbers = [1, 2, 3];
+const unshifted = numbers.unshift(5);
+console.log(numbers);
+console.log(unshifted);
