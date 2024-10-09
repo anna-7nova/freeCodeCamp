@@ -1,6 +1,8 @@
-const character = "#";
-const count = 8;
+const character = "!";
+const count = 10;
 const rows = [];
+
+let inverted = false;
 
 function padRow(rowNumber, rowCount) {
   return (
@@ -9,12 +11,23 @@ function padRow(rowNumber, rowCount) {
     " ".repeat(rowCount - rowNumber)
   );
 }
-//need to change the code to a different kind of loop.
-for (let i = 1; i < count; i++) {
-  rows.push(padRow(i, count));
+
+// TODO: use a different type of loop
+
+for (let i = 1; i <= count; i++) {
+  if (inverted) {
+    rows.unshift(padRow(i, count));
+  } else {
+    rows.push(padRow(i, count));
+  }
 }
 
-let result = "";
+//need to change the code to a different kind of loop.
+/*for (let i = 1; i < count; i++) {
+  rows.push(padRow(i, count));
+}*/
+
+/*let result = "";
 console.log(result);
 
 for (const row of rows) {
@@ -25,7 +38,7 @@ function addTwoNumbers(firstNum, secondNum) {
   return firstNum + secondNum;
 }
 const sum = addTwoNumbers(5, 10);
-console.log(sum);
+console.log(sum);*/
 
 /*while (rows.length < count) {
   rows.push(padRow(rows.length + 1, count));
@@ -35,7 +48,9 @@ console.log(sum);
   rows.push(padRow(i, count));
   }
 */
-const numbers = [1, 2, 3];
+/*const numbers = [1, 2, 3];
+const shifted = numbers.shift();
+console.log(shifted);
 const unshifted = numbers.unshift(5);
-console.log(numbers);
 console.log(unshifted);
+console.log(numbers);*/
