@@ -1,10 +1,13 @@
 function getAverage(scores) {
   let sum = 0;
+
   for (const score of scores) {
     sum += score;
   }
+
   return sum / scores.length;
 }
+
 function getGrade(score) {
   if (score === 100) {
     return "A++";
@@ -21,6 +24,14 @@ function getGrade(score) {
   }
 }
 
-console.log(getGrade(96));
-console.log(getGrade(82));
-console.log(getGrade(56));
+function hasPassingGrade(score) {
+  if (score > 59) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(hasPassingGrade(100));
+console.log(hasPassingGrade(53));
+console.log(hasPassingGrade(87));
